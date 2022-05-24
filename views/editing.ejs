@@ -1,16 +1,12 @@
 <%- include('header') -%>
 
-
-
 <div class="text-center center" style="margin-top: 50px;"><h2>add/update</h2></div>
 <p></p>
 
 <div class="container  border w-25 py-5 text-center">
- 
-
-    <div >
-    <form action="/add" method="post" enctype="multipart/form-data" >
-        
+   
+    <div>
+        <form action="/update/<%= users._id %>" method="post" enctype="multipart/form-data">
         <div class="mb-3 ">
             <!-- <label for="email1" class="form-label">Email</label> -->
             <div>
@@ -23,39 +19,40 @@
         </div>
         <div class="mb-3 ">
             <!-- <label for="email1" class="form-label">Email</label> -->
-            <input class="form-control" type="text" name="name" id="email1" placeholder="Name"/>
+            <input class="form-control" type="text" name="name" id="email1" value="<%= users.name %>"/>
         </div>
         <div class="mb-3 ">
             <!-- <label for="email1" class="form-label">Email</label> -->
-            <input class="form-control" type="email" name="email" id="email1" placeholder="Email"/>
+            <input class="form-control" type="email" name="email" id="email1"value="<%= users.email %>"/>
         </div>
         <div class="mb-3">
             <!-- <label for="password1" class="form-label">password</label> -->
-            <input class="form-control" type="text" name="phone" id="password1" placeholder="Phone"/>
+            <input class="form-control" type="text" name="phone" id="password1" value="<%= users.phone %>"/>
         </div>
         <div class="mb-3">
             <!-- <label for="password1" class="form-label">password</label> -->
-            <input class="form-control" type="text" name="country" id="password2" placeholder="Country"/>
+            <input class="form-control" type="text" name="country" id="password2" value="<%= users.country %>"/>
         </div>
         <div class="mb-3">
             <!-- <label for="password1" class="form-label">password</label> -->
-            <input class="form-control" type="text" name="city" id="password2" placeholder="city"/>
+            <input class="form-control" type="text" name="city" id="password2" value="<%= users.city %>"/>
         </div>
         <div class="mb-3">
             <!-- <label for="password1" class="form-label">password</label> -->
-            <input class="form-control" type="text" name="address" id="password2" placeholder="address"/>
+            <input class="form-control" type="text" name="address" id="password2" value="<%= users.address %>"/>
         </div>
         <div class="mb-3">
             <!-- <label for="password1" class="form-label">password</label> -->
-            <input class="form-control" type="text" name="state" id="password2" placeholder="state"/>
+            <input class="form-control" type="text" name="state" id="password2" value="<%= users.state %>"/>
         </div>
         <div class="mb-3">
             <!-- <label for="password1" class="form-label">password</label> -->
-            <input class="form-control" type="text" name="zip" id="password2" placeholder="zip"/>
+            <input class="form-control" type="text" name="zip" id="password2"value="<%= users.zip %>"/>
         </div>
         <div class="mb-3">
-            <button class="btn btn-secondary" type="submit">Sign Up</button>
+            <button class="btn btn-secondary" type="submit">update</button>
             <a class="btn btn-secondary" href="/home">Check</a>
+        
         </div>
     </form>
 </div>
