@@ -13,7 +13,7 @@ app.use('/',routes)
 app.use(morgan('tiny'))
 app.use(bodyparser.urlencoded({extended:true}))
 
-app.set("view engine","pug")
+app.set("view engine","ejs")
 
 app.use("/",express.static(path.resolve('public/css')))
 // app.use("/",express.static(path.resolve('public/img')))
