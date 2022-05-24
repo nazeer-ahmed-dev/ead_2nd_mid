@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const NameOfTable = mongoose.Schema(
+const userdata = mongoose.Schema(
     {
        name:
        {
@@ -11,17 +11,44 @@ const NameOfTable = mongoose.Schema(
             type:String,
             required:true
         },
-        password:
-        {
-            type:String,
-            required:true
-        }, 
-        image:
+        phone:
         {
             type:String,
             required:true
         }
+        , 
+        country:
+        {
+            type:String,
+            required:true
+        }
+        , 
+        city:
+        {
+            type:String,
+            required:true
+        }
+        , 
+        address:
+        {
+            type:String,
+            required:true
+        },
+        state:
+        {
+            type:String,
+            required:true
+        }
+
+        , 
+        zip:
+        {
+            type:String,
+            required:true
+        }
+
     }
 );
 
-module.exports = mongoose.model('registration',NameOfTable);
+const Regstr = mongoose.model('registration',userdata);
+module.exports = Regstr
